@@ -1,0 +1,7 @@
+{
+  "name": "pikachu",
+  "short_name": "pikachu",
+  "description": "Just a MVP prototype",
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,4 +1,5 @@
-# pikachu
+# \<pikachu\>
+
 Ferramenta de UX colaborativa
 
 ## Objetivo
@@ -17,10 +18,37 @@ Desenvolver uma ferramenta de apoio a desenvolvedores com o objetivo de permitir
 8. Quando o usuário postar um trabalho para avaliação, deverá informar o especialista requerido ou se prefere a avaliação de usuários leigos, dessa forma o sistema fará sugestões para os especialistas (ou leigos) e recompensará o usuário que avaliar, e que receber like pela avaliação com a marca dessa área.
 9. Uma dessas especialidades deverá ser acessibilidade com subcategorias (ou categorias de mesmo nível) para cada tipo de necessidade especial.
 
+## Install the Polymer-CLI
 
-## Tarefas para a próxima semana
-1. Criar um rabisco frame com as ideias do fluxo de navegação do projeto.
+First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
 
-## Projetos semelhantes:
+## Viewing Your Application
 
-* [dribbble.com](https://dribbble.com/)
+```
+$ polymer serve
+```
+
+## Building Your Application
+
+```
+$ polymer build
+```
+
+This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
+containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
+CSS, and JS optimizers.
+
+You can serve the built versions by giving `polymer serve` a folder to serve
+from:
+
+```
+$ polymer serve build/bundled
+```
+
+## Running Tests
+
+```
+$ polymer test
+```
+
+Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
