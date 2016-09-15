@@ -9,7 +9,8 @@
       "thumbnail": "https://unsplash.it/320/240?random&1",
       "user": {
         "nickname": "Le Usuário",
-        "photo": "https://unsplash.it/128/128?random&6"
+        "photo": "https://unsplash.it/128/128?random&6",
+        "spec": {"title": "Acessibilidade Visual", "color": "#80CBC4"}
       },
       "views": 1025,
       "comments": 6,
@@ -24,7 +25,8 @@
       "thumbnail": "https://unsplash.it/320/240?random&2",
       "user": {
         "nickname": "Bruno Gomes",
-        "photo": "https://unsplash.it/128/128?random&3"
+        "photo": "https://unsplash.it/128/128?random&3",
+        "spec": {"title": "Acessibilidade Visual", "color": "#80CBC4"}
       },
       "views": 5435,
       "comments": 58,
@@ -38,7 +40,8 @@
       "thumbnail": "https://unsplash.it/320/240?random&4",
       "user": {
         "nickname": "Katty",
-        "photo": "https://unsplash.it/128/128?random&5"
+        "photo": "https://unsplash.it/128/128?random&5",
+        "spec": {"title": "Material Design", "color": "#F44336"}
       },
       "views": 5435,
       "comments": 58,
@@ -53,7 +56,8 @@
       "thumbnail": "https://unsplash.it/320/240?random&7",
       "user": {
         "nickname": "Luan",
-        "photo": "https://unsplash.it/128/128?random&8"
+        "photo": "https://unsplash.it/128/128?random&8",
+        "spec": {"title": "Material Design", "color": "#F44336"}
       },
       "views": 5435,
       "comments": 58,

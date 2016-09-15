@@ -1,24 +1,61 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../pik-circle/pik-circle.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
 
 <dom-module id="pik-button-profile">
   <template>
     <style>
       :host {
-        display: block;
+        @apply(--layout-inline);
+        @apply(--layout-center);
+        cursor: pointer;
+        box-sizing: border-box;
+        margin: 0 0.29em;
+        padding: 0.7em 0.57em;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      #photo {
+        border-radius: 50%;
+        border-style: solid;
+        min-width: 32px;
+        min-height: 32px;
+      }
+
+      #nickname {
+        @apply(--layout-flex);
+        display: none;
+        margin-left: 8px;
       }
     </style>
-    <paper-button noink>
-      <pik-circle image="{{user.photo}}"></pik-circle>
-    </paper-button>
+    <iron-image id="photo" src="{{user.photo}}" sizing="cover"></iron-image>
+    <span id="nickname">{{user.nickname}}</span>
   </template>
   <script>
     Polymer({
       is: 'pik-button-profile',
 
       properties: {
-        user: Object
+        user: Object,
+        showNickname: {
+          type: Boolean,
+          value: false
+        }
+      },
+      observers: [
+        '_changeColor(user.spec.color)',
+        '_showNickname(showNickname)'
+      ],
+      _changeColor: function(color) {
+        this.$.photo.style.borderColor = color;
+      },
+      _showNickname: function(show) {
+        if(show) {
+          this.$.nickname.style.display = 'block';
+        }
       }
     });
   </script>
