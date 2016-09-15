@@ -9,7 +9,7 @@
       "thumbnail": "https://unsplash.it/320/240?random&1",
       "user": {
         "nickname": "Le Usuário",
-        "photo": "https://unsplash.it/128/128?hw45hrth"
+        "photo": "https://unsplash.it/128/128?random&6"
       },
       "views": 1025,
       "comments": 6,
@@ -39,6 +39,21 @@
       "user": {
         "nickname": "Katty",
         "photo": "https://unsplash.it/128/128?random&5"
+      },
+      "views": 5435,
+      "comments": 58,
+      "favorites": 33
+    },
+    {
+      "title": "Site de evento",
+      "specs": [
+        {"title": "Acessibilidade Motora", "color": "#F44336"},
+        {"title": "Acessibilidade Visual", "color": "#80CBC4"}
+      ],
+      "thumbnail": "https://unsplash.it/320/240?random&7",
+      "user": {
+        "nickname": "Luan",
+        "photo": "https://unsplash.it/128/128?random&8"
       },
       "views": 5435,
       "comments": 58,
