@@ -1,0 +1,51 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="pik-card-projeto">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      paper-card {
+        --paper-card-header-color: #fff;
+      }
+    </style>
+
+    <paper-card heading="{{projeto.title}}" image="{{projeto.thumbnail}}">
+      <div class="specs">
+        <template is="dom-repeat" items="{{projeto.specs}}" as="spec">
+          <pik-card-spec spec="{{spec}}"></pik-card-spec>
+        </template>
+      </div>
+      <div class="card-actions">
+        <pik-button-profile user="{{projeto.profile}}"></pik-button-profile>
+        <div class="nickname">{{projeto.nickname}}</div>
+        <paper-button noink>
+          <iron-icon icon="visibility"></iron-icon>
+          {{projeto.views}}
+        </paper-button>
+        <paper-button noink>
+          <iron-icon icon="favorite-border"></iron-icon>
+          {{projeto.favorites}}
+        </paper-button>
+      </div>
+    </paper-card>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'pik-card-projeto',
+
+      properties: {
+        projeto: Object
+      }
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,29 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../pik-card-projeto/pik-card-projeto.html">
+
+<dom-module id="pik-descubra">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      pik-card-projeto {
+        display: inline-block;
+      }
+    </style>
+    <template is="dom-repeat" items="{{projetos}}" as="projeto">
+      <pik-card-projeto projeto="{{projeto}}"></pik-card-projeto>
+    </template>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'pik-descubra',
+
+      properties: {
+        projetos: Array
+      }
+    });
+  </script>
+</dom-module>

@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../pik-descubra/pik-descubra.html">
 
 <dom-module id="pik-app">
   <template>
@@ -7,7 +8,7 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <pik-descubra projetos="{{projetos}}"></pik-descubra>
   </template>
 
   <script>
@@ -19,19 +20,19 @@
           type: Array,
           value: [
             {
-              title: "Projeto Blabla"
+              title: "Projeto Blabla",
               specs: [
                 {title: 'Wordpress', color: '#E3F2FD'},
                 {title: 'Material Design', color: '#F44336'}
               ],
-              thumbnail: 'https://unsplash.it/640/480?random',
+              thumbnail: 'https://unsplash.it/320/240?random',
               user: {
-                nickname: 'Le Usuário'
+                nickname: 'Le Usuário',
                 photo: 'https://unsplash.it/128/128?random'
-              }
-              views: 1025
+              },
+              views: 1025,
               comments: 6,
-              likes: 10
+              favorites: 10
             }
           ]
         }
