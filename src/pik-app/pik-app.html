@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../pik-descubra/pik-descubra.html">
 
 <dom-module id="pik-app">
@@ -8,6 +9,12 @@
         display: block;
       }
     </style>
+    <iron-ajax
+      auto
+      url="../projetos.json"
+      handle-as="json"
+      on-response="_handleResponse">
+    </iron-ajax>
     <pik-descubra projetos="{{projetos}}"></pik-descubra>
   </template>
 
@@ -16,26 +23,11 @@
       is: 'pik-app',
 
       properties: {
-        projetos: {
-          type: Array,
-          value: [
-            {
-              title: "Projeto Blabla",
-              specs: [
-                {title: 'Wordpress', color: '#E3F2FD'},
-                {title: 'Material Design', color: '#F44336'}
-              ],
-              thumbnail: 'https://unsplash.it/320/240?random',
-              user: {
-                nickname: 'Le Usuário',
-                photo: 'https://unsplash.it/128/128?random'
-              },
-              views: 1025,
-              comments: 6,
-              favorites: 10
-            }
-          ]
-        }
+        projetos: Array
+      },
+
+      _handleResponse: function(event) {
+        this.set('projetos', event.detail.response.data);
       }
     });
   </script>
