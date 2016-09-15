@@ -12,16 +12,30 @@
 
   <script>
     Polymer({
-
       is: 'pik-app',
 
       properties: {
-        prop1: {
-          type: String,
-          value: 'pik-app',
-        },
-      },
-
+        projetos: {
+          type: Array,
+          value: [
+            {
+              title: "Projeto Blabla"
+              specs: [
+                {title: 'Wordpress', color: '#E3F2FD'},
+                {title: 'Material Design', color: '#F44336'}
+              ],
+              thumbnail: 'https://unsplash.it/640/480?random',
+              user: {
+                nickname: 'Le Usuário'
+                photo: 'https://unsplash.it/128/128?random'
+              }
+              views: 1025
+              comments: 6,
+              likes: 10
+            }
+          ]
+        }
+      }
     });
   </script>
 </dom-module>
