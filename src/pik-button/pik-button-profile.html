@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../pik-circle/pik-circle.html">
+
+<dom-module id="pik-button-profile">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <paper-button noink>
+      <pik-circle image="{{user.photo}}"></pik-circle>
+    </paper-button>
+  </template>
+  <script>
+    Polymer({
+      is: 'pik-button-profile',
+
+      properties: {
+        user: Object
+      }
+    });
+  </script>
+</dom-module>
